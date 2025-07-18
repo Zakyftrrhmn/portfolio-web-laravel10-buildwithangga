@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
@@ -59,3 +60,31 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+=======
+# Creative Agency Portfolio - Laravel 10
+
+📚 Project ini dibuat sebagai hasil dari mengikuti kelas **"Full-Stack Web Developer: Creative Agency Portfolio 2024"** di [BuildWithAngga](https://buildwithangga.com).
+
+🎯 Tujuan utama dari project ini adalah membangun website portfolio modern yang cocok digunakan oleh freelancer atau creative agency untuk mempromosikan jasa mereka. Website ini dibangun menggunakan Laravel 10 dan Blade engine, dilengkapi dengan fitur CMS Admin menggunakan Laravel Breeze.
+
+## 🔧 Fitur Utama
+- Halaman Home, Detail Project, dan Booking
+- CMS Admin untuk mengelola Projects, Tools, dan Orders
+- Autentikasi dengan Laravel Breeze
+- Mengintegrasikan template HTML ke Blade Engine
+- Relasi antar tabel database dengan migrasi dan seeder
+
+## 💡 Teknologi yang Digunakan
+- Laravel 10
+- Blade Templating Engine
+- Laravel Breeze (CMS dan Auth)
+- MySQL / SQLite
+- Bootstrap / Tailwind (tergantung pada template dari pelatihan)
+
+## ⚠️ Catatan
+Project ini dibuat berdasarkan materi pelatihan dan **tidak diklaim sebagai karya orisinal sepenuhnya**. Tujuannya adalah untuk pembelajaran dan pengembangan portofolio. Kredensial dan hak cipta konten tetap milik [BuildWithAngga](https://buildwithangga.com).
+
+---
+
+🧠 *Repositori ini akan terus dikembangkan agar lebih sesuai dengan kebutuhan dan gaya coding saya sendiri seiring waktu.*
+>>>>>>> 4bc7b38fcbfa65d111de0a566f97ef162ce9f612
