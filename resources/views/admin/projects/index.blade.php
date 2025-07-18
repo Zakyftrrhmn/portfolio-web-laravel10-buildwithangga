@@ -31,7 +31,11 @@
 
                         <div class="flex-row flex items-center gap-x-2">
                             <a href="{{route('admin.projects.edit', $p)}}" class="py-3 px-5 rounded-full bg-indigo-500 text-white">Edit</a>
-                            <a href="" class="py-3 px-5 rounded-full bg-red-500 text-white">Delete</a>
+                            <form action="{{route('admin.projects.destroy', $p)}}" method="POST">
+                                @method('DELETE')
+                                @csrf
+                                <button type="submit" class="py-3 px-5 rounded-full bg-red-500 text-white">Delete</button>
+                            </form>
                         </div>
                     </div>
                     @empty
