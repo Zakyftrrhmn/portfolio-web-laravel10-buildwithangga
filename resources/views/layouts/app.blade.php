@@ -31,6 +31,10 @@
             <main>
                 {{ $slot }}
             </main>
+
+                @stack('before-script')
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    @stack('after-script')
         </div>
     </body>
 </html>
