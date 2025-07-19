@@ -12,7 +12,8 @@ class ProjectOrderController extends Controller
      */
     public function index()
     {
-        //
+        $orders = ProjectOrder::orderBy('id', 'desc')->get();
+        return view('admin.project_orders.index', compact('orders'));
     }
 
     /**
@@ -36,7 +37,7 @@ class ProjectOrderController extends Controller
      */
     public function show(ProjectOrder $projectOrder)
     {
-        //
+        return view('admin.project_orders.show', compact('projectOrder'));
     }
 
     /**

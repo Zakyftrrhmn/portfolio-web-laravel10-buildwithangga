@@ -61,7 +61,8 @@
                         Tell me anything about your biggest future dreams
                     </p>
                 </div>
-                <form action="" class="flex flex-col gap-5 w-[550px]">
+                <form action="{{route('front.book.store')}}" method="POST" class="flex flex-col gap-5 w-[550px]">
+                    @csrf
                     <label class="flex flex-col gap-[10px] font-semibold">
                         <span class="text-white">Complete Name</span>
                         <input
@@ -104,7 +105,9 @@
                                 >
                                     Select category
                                 </option>
-                                <option value="">Website Development</option>
+                                <option value="Website Development">Website Development</option>
+                                <option value="App Development">App Development</option>
+                                <option value="Grapich Development">Grapich Development</option>
                             </select>
                         </label>
                         <label
@@ -131,7 +134,7 @@
                             required
                         ></textarea>
                     </label>
-                    <button
+                    <button type="submit"
                         class="font-bold text-lg text-white bg-portto-purple rounded-[20px] p-5 transition-all duration-300 hover:shadow-[0_10px_20px_0_#4920E5]"
                     >
                         Request for Meeting

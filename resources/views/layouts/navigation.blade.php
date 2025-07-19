@@ -33,7 +33,7 @@
 
                                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                    <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
+                    <x-nav-link :href="route('admin.project_orders.index')" :active="request()->routeIs('admin.project_orders.index')">
                         {{ __('Orders') }}
                     </x-nav-link>
                 </div>

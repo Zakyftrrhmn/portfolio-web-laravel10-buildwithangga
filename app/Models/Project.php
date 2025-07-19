@@ -18,4 +18,9 @@ class Project extends Model
             ->wherePivotNull('deleted_at')
             ->withPivot('id');
     }
+
+    public function screenshots()
+    {
+        return $this->hasMany(ProjectScreenshot::class, 'project_id', 'id');
+    }
 }

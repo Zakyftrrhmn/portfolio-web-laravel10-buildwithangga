@@ -5,31 +5,7 @@
 
 
     <section id="Header" class="flex flex-col gap-[100px] bg-portto-black relative">
-        <nav class="container max-w-[1130px] mx-auto flex justify-between items-center pt-[30px] z-10">
-            <a href="index.html" class="w-[161px] flex shrink-0 h-fit w-fit">
-                <img src="{{asset('images/logos/logo.svg')}}" alt="logo">
-            </a>
-            <div class="flex gap-[50px] items-center">
-                <ul class="flex gap-[50px] items-center text-white">
-                    <li>
-                        <a href="index.html"  class="font-medium text-lg hover:text-portto-light-gold transition-all duration-300">Home</a>
-                    </li>
-                    <li>
-                        <a href=""  class="font-medium text-lg hover:text-portto-light-gold transition-all duration-300">Services</a>
-                    </li>
-                    <li>
-                        <a href=""  class="font-medium text-lg hover:text-portto-light-gold transition-all duration-300">Testimonials</a>
-                    </li>
-                    <li>
-                        <a href=""  class="font-medium text-lg hover:text-portto-light-gold transition-all duration-300">Pricing</a>
-                    </li>
-                    <li>
-                        <a href=""  class="font-medium text-lg hover:text-portto-light-gold transition-all duration-300">About</a>
-                    </li>
-                </ul>
-                <button class="bg-portto-light-gold font-bold text-lg p-[14px_30px] rounded-full transition-all duration-300 hover:shadow-[0_10px_20px_0_#FFE7C280]">Hire Me</button>
-            </div>
-        </nav>
+        <x-nav/>
         <div class="hero container max-w-[1130px] mx-auto flex justify-between items-center relative">
             <div class="flex flex-col gap-[50px] h-fit w-fit text-white z-10">
                 <p class="font-semibold text-2xl">I’m Shayna 👋</p>
@@ -177,173 +153,97 @@
         </div>
         <div class="projects w-full flex flex-col mb-[30px] overflow-hidden">    
             <div class="group/slider slider flex flex-nowrap w-max items-center">
+
                 <div class="project-container animate-[slide_50s_linear_infinite] group-hover/slider:pause-animate flex gap-[30px] pl-[30px] items-center flex-nowrap">
-                    <div class="group w-[650px] h-[450px] flex shrink-0 rounded-[30px] border border-white p-5 bg-[#FFFFFF33] backdrop-blur relative">
-                        <div class="w-[608px] h-[408px] rounded-[30px] overflow-hidden absolute">
-                            <img src="{{asset('images/thumbnails/thumbnail1.png')}}" class="w-full h-full object-cover" alt="thumbnail">
-                        </div>
-                        <div class="flex flex-col w-full items-center justify-center gap-[50px] bg-portto-black rounded-[30px] relative opacity-0 hover:opacity-100 transition-all duration-300">
-                            <div class="text-center z-10">
-                                <p class="font-extrabold text-[32px] leading-[48px] mb-[10px] text-white">AI Finance SaaS <br>Website Integrations</p>
-                                <p class="text-lg text-[#BABABC]">Website Development</p>
-                            </div>
-                            <a href="details.html" class="z-10 font-bold text-lg text-center w-fit h-fit bg-portto-light-gold rounded-full p-[14px_30px] transition-all duration-300 hover:shadow-[0_10px_20px_0_#FFE7C280]">View Details</a>
-                            <img src="{{asset('images/Ellipse.svg')}}" class="absolute transform -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2 w-1/2" alt="background icon">
-                        </div>
-                    </div>
-                    <div class="group w-[650px] h-[450px] flex shrink-0 rounded-[30px] border border-white p-5 bg-[#FFFFFF33] backdrop-blur relative">
-                        <div class="w-[608px] h-[408px] rounded-[30px] overflow-hidden absolute">
-                            <img src="{{asset('images/thumbnails/thumbnail2.png')}}" class="w-full h-full object-cover" alt="thumbnail">
-                        </div>
-                        <div class="flex flex-col w-full items-center justify-center gap-[50px] bg-portto-black rounded-[30px] relative opacity-0 hover:opacity-100 transition-all duration-300">
-                            <div class="text-center z-10">
-                                <p class="font-extrabold text-[32px] leading-[48px] mb-[10px] text-white">AI Finance SaaS <br>Website Integrations</p>
-                                <p class="text-lg text-[#BABABC]">Website Development</p>
-                            </div>
-                            <a href="details.html" class="z-10 font-bold text-lg text-center w-fit h-fit bg-portto-light-gold rounded-full p-[14px_30px] transition-all duration-300 hover:shadow-[0_10px_20px_0_#FFE7C280]">View Details</a>
-                            <img src="{{asset('images/Ellipse.svg')}}" class="absolute transform -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2 w-1/2" alt="background icon">
-                        </div>
-                    </div>
-                    <div class="group w-[650px] h-[450px] flex shrink-0 rounded-[30px] border border-white p-5 bg-[#FFFFFF33] backdrop-blur relative">
-                        <div class="w-[608px] h-[408px] rounded-[30px] overflow-hidden absolute">
-                            <img src="{{asset('images/thumbnails/thumbnail3.png')}}" class="w-full h-full object-cover" alt="thumbnail">
-                        </div>
-                        <div class="flex flex-col w-full items-center justify-center gap-[50px] bg-portto-black rounded-[30px] relative opacity-0 hover:opacity-100 transition-all duration-300">
-                            <div class="text-center z-10">
-                                <p class="font-extrabold text-[32px] leading-[48px] mb-[10px] text-white">AI Finance SaaS <br>Website Integrations</p>
-                                <p class="text-lg text-[#BABABC]">Website Development</p>
-                            </div>
-                            <a href="details.html" class="z-10 font-bold text-lg text-center w-fit h-fit bg-portto-light-gold rounded-full p-[14px_30px] transition-all duration-300 hover:shadow-[0_10px_20px_0_#FFE7C280]">View Details</a>
-                            <img src="{{asset('images/Ellipse.svg')}}" class="absolute transform -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2 w-1/2" alt="background icon">
-                        </div>
-                    </div>
+                    @forelse ($projects as $index => $project)
+                        @if ($index < 3)
+                            <div class="group w-[650px] h-[450px] flex shrink-0 rounded-[30px] border border-white p-5 bg-[#FFFFFF33] backdrop-blur relative">
+                                <div class="w-[608px] h-[408px] rounded-[30px] overflow-hidden absolute">
+                                    <img src="{{Storage::url($project->cover)}}" class="w-full h-full object-cover" alt="thumbnail">
+                                </div>
+                                <div class="flex flex-col w-full items-center justify-center gap-[50px] bg-portto-black rounded-[30px] relative opacity-0 hover:opacity-100 transition-all duration-300">
+                                    <div class="text-center z-10">
+                                        <p class="font-extrabold text-[32px] leading-[48px] mb-[10px] text-white">{{$project->name}}</p>
+                                        <p class="text-lg text-[#BABABC]">{{$project->category}}</p>
+                                    </div>
+                                    <a href="{{route('front.details', $project)}}" class="z-10 font-bold text-lg text-center w-fit h-fit bg-portto-light-gold rounded-full p-[14px_30px] transition-all duration-300 hover:shadow-[0_10px_20px_0_#FFE7C280]">View Details</a>
+                                    <img src="{{asset('images/Ellipse.svg')}}" class="absolute transform -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2 w-1/2" alt="background icon">
+                                </div>
+                            </div>                            
+                        @endif
+                    @empty
+                        Data Belum Tersedia
+                    @endforelse
                 </div>
                 <div class="project-container animate-[slide_50s_linear_infinite] group-hover/slider:pause-animate flex gap-[30px] pl-[30px] items-center flex-nowrap ">
-                    <div class="group w-[650px] h-[450px] flex shrink-0 rounded-[30px] border border-white p-5 bg-[#FFFFFF33] backdrop-blur relative">
-                        <div class="w-[608px] h-[408px] rounded-[30px] overflow-hidden absolute">
-                            <img src="{{asset('images/thumbnails/thumbnail1.png')}}" class="w-full h-full object-cover" alt="thumbnail">
-                        </div>
-                        <div class="flex flex-col w-full items-center justify-center gap-[50px] bg-portto-black rounded-[30px] relative opacity-0 hover:opacity-100 transition-all duration-300">
-                            <div class="text-center z-10">
-                                <p class="font-extrabold text-[32px] leading-[48px] mb-[10px] text-white">AI Finance SaaS <br>Website Integrations</p>
-                                <p class="text-lg text-[#BABABC]">Website Development</p>
-                            </div>
-                            <a href="details.html" class="z-10 font-bold text-lg text-center w-fit h-fit bg-portto-light-gold rounded-full p-[14px_30px] transition-all duration-300 hover:shadow-[0_10px_20px_0_#FFE7C280]">View Details</a>
-                            <img src="{{asset('images/Ellipse.svg')}}" class="absolute transform -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2 w-1/2" alt="background icon">
-                        </div>
-                    </div>
-                    <div class="group w-[650px] h-[450px] flex shrink-0 rounded-[30px] border border-white p-5 bg-[#FFFFFF33] backdrop-blur relative">
-                        <div class="w-[608px] h-[408px] rounded-[30px] overflow-hidden absolute">
-                            <img src="{{asset('images/thumbnails/thumbnail2.png')}}" class="w-full h-full object-cover" alt="thumbnail">
-                        </div>
-                        <div class="flex flex-col w-full items-center justify-center gap-[50px] bg-portto-black rounded-[30px] relative opacity-0 hover:opacity-100 transition-all duration-300">
-                            <div class="text-center z-10">
-                                <p class="font-extrabold text-[32px] leading-[48px] mb-[10px] text-white">AI Finance SaaS <br>Website Integrations</p>
-                                <p class="text-lg text-[#BABABC]">Website Development</p>
-                            </div>
-                            <a href="details.html" class="z-10 font-bold text-lg text-center w-fit h-fit bg-portto-light-gold rounded-full p-[14px_30px] transition-all duration-300 hover:shadow-[0_10px_20px_0_#FFE7C280]">View Details</a>
-                            <img src="{{asset('images/Ellipse.svg')}}" class="absolute transform -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2 w-1/2" alt="background icon">
-                        </div>
-                    </div>
-                    <div class="group w-[650px] h-[450px] flex shrink-0 rounded-[30px] border border-white p-5 bg-[#FFFFFF33] backdrop-blur relative">
-                        <div class="w-[608px] h-[408px] rounded-[30px] overflow-hidden absolute">
-                            <img src="{{asset('images/thumbnails/thumbnail3.png')}}" class="w-full h-full object-cover" alt="thumbnail">
-                        </div>
-                        <div class="flex flex-col w-full items-center justify-center gap-[50px] bg-portto-black rounded-[30px] relative opacity-0 hover:opacity-100 transition-all duration-300">
-                            <div class="text-center z-10">
-                                <p class="font-extrabold text-[32px] leading-[48px] mb-[10px] text-white">AI Finance SaaS <br>Website Integrations</p>
-                                <p class="text-lg text-[#BABABC]">Website Development</p>
-                            </div>
-                            <a href="details.html" class="z-10 font-bold text-lg text-center w-fit h-fit bg-portto-light-gold rounded-full p-[14px_30px] transition-all duration-300 hover:shadow-[0_10px_20px_0_#FFE7C280]">View Details</a>
-                            <img src="{{asset('images/Ellipse.svg')}}" class="absolute transform -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2 w-1/2" alt="background icon">
-                        </div>
-                    </div>
+                    @forelse ($projects as $project)
+                        @if ($index < 3)
+                            <div class="group w-[650px] h-[450px] flex shrink-0 rounded-[30px] border border-white p-5 bg-[#FFFFFF33] backdrop-blur relative">
+                                <div class="w-[608px] h-[408px] rounded-[30px] overflow-hidden absolute">
+                                    <img src="{{Storage::url($project->cover)}}" class="w-full h-full object-cover" alt="thumbnail">
+                                </div>
+                                <div class="flex flex-col w-full items-center justify-center gap-[50px] bg-portto-black rounded-[30px] relative opacity-0 hover:opacity-100 transition-all duration-300">
+                                    <div class="text-center z-10">
+                                        <p class="font-extrabold text-[32px] leading-[48px] mb-[10px] text-white">{{$project->name}}</p>
+                                        <p class="text-lg text-[#BABABC]">{{$project->category}}</p>
+                                    </div>
+                                    <a href="{{route('front.details', $project)}}" class="z-10 font-bold text-lg text-center w-fit h-fit bg-portto-light-gold rounded-full p-[14px_30px] transition-all duration-300 hover:shadow-[0_10px_20px_0_#FFE7C280]">View Details</a>
+                                    <img src="{{asset('images/Ellipse.svg')}}" class="absolute transform -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2 w-1/2" alt="background icon">
+                                </div>
+                            </div>                            
+                        @endif
+                    @empty
+                        Data Belum Tersedia
+                    @endforelse
                 </div>
+
             </div>
         </div>
         <div class="projects w-full flex flex-col overflow-hidden">    
             <div class="group/slider slider flex flex-nowrap w-max items-center">
                 <div class="project-container animate-[slideToR_50s_linear_infinite] group-hover/slider:pause-animate flex gap-[30px] pl-[30px] items-center flex-nowrap">
-                    <div class="group w-[650px] h-[450px] flex shrink-0 rounded-[30px] border border-white p-5 bg-[#FFFFFF33] backdrop-blur relative">
-                        <div class="w-[608px] h-[408px] rounded-[30px] overflow-hidden absolute">
-                            <img src="{{asset('images/thumbnails/thumbnail1.png')}}" class="w-full h-full object-cover" alt="thumbnail">
-                        </div>
-                        <div class="flex flex-col w-full items-center justify-center gap-[50px] bg-portto-black rounded-[30px] relative opacity-0 hover:opacity-100 transition-all duration-300">
-                            <div class="text-center z-10">
-                                <p class="font-extrabold text-[32px] leading-[48px] mb-[10px] text-white">AI Finance SaaS <br>Website Integrations</p>
-                                <p class="text-lg text-[#BABABC]">Website Development</p>
-                            </div>
-                            <a href="details.html" class="z-10 font-bold text-lg text-center w-fit h-fit bg-portto-light-gold rounded-full p-[14px_30px] transition-all duration-300 hover:shadow-[0_10px_20px_0_#FFE7C280]">View Details</a>
-                            <img src="{{asset('images/Ellipse.svg')}}" class="absolute transform -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2 w-1/2" alt="background icon">
-                        </div>
-                    </div>
-                    <div class="group w-[650px] h-[450px] flex shrink-0 rounded-[30px] border border-white p-5 bg-[#FFFFFF33] backdrop-blur relative">
-                        <div class="w-[608px] h-[408px] rounded-[30px] overflow-hidden absolute">
-                            <img src="{{asset('images/thumbnails/thumbnail2.png')}}" class="w-full h-full object-cover" alt="thumbnail">
-                        </div>
-                        <div class="flex flex-col w-full items-center justify-center gap-[50px] bg-portto-black rounded-[30px] relative opacity-0 hover:opacity-100 transition-all duration-300">
-                            <div class="text-center z-10">
-                                <p class="font-extrabold text-[32px] leading-[48px] mb-[10px] text-white">AI Finance SaaS <br>Website Integrations</p>
-                                <p class="text-lg text-[#BABABC]">Website Development</p>
-                            </div>
-                            <a href="details.html" class="z-10 font-bold text-lg text-center w-fit h-fit bg-portto-light-gold rounded-full p-[14px_30px] transition-all duration-300 hover:shadow-[0_10px_20px_0_#FFE7C280]">View Details</a>
-                            <img src="{{asset('images/Ellipse.svg')}}" class="absolute transform -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2 w-1/2" alt="background icon">
-                        </div>
-                    </div>
-                    <div class="group w-[650px] h-[450px] flex shrink-0 rounded-[30px] border border-white p-5 bg-[#FFFFFF33] backdrop-blur relative">
-                        <div class="w-[608px] h-[408px] rounded-[30px] overflow-hidden absolute">
-                            <img src="{{asset('images/thumbnails/thumbnail3.png')}}" class="w-full h-full object-cover" alt="thumbnail">
-                        </div>
-                        <div class="flex flex-col w-full items-center justify-center gap-[50px] bg-portto-black rounded-[30px] relative opacity-0 hover:opacity-100 transition-all duration-300">
-                            <div class="text-center z-10">
-                                <p class="font-extrabold text-[32px] leading-[48px] mb-[10px] text-white">AI Finance SaaS <br>Website Integrations</p>
-                                <p class="text-lg text-[#BABABC]">Website Development</p>
-                            </div>
-                            <a href="details.html" class="z-10 font-bold text-lg text-center w-fit h-fit bg-portto-light-gold rounded-full p-[14px_30px] transition-all duration-300 hover:shadow-[0_10px_20px_0_#FFE7C280]">View Details</a>
-                            <img src="{{asset('images/Ellipse.svg')}}" class="absolute transform -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2 w-1/2" alt="background icon">
-                        </div>
-                    </div>
+                    
+                    @forelse ($projects as $project)
+                    @if ($index >= 3)
+                            <div class="group w-[650px] h-[450px] flex shrink-0 rounded-[30px] border border-white p-5 bg-[#FFFFFF33] backdrop-blur relative">
+                                <div class="w-[608px] h-[408px] rounded-[30px] overflow-hidden absolute">
+                                    <img src="{{Storage::url($project->cover)}}" class="w-full h-full object-cover" alt="thumbnail">
+                                </div>
+                                <div class="flex flex-col w-full items-center justify-center gap-[50px] bg-portto-black rounded-[30px] relative opacity-0 hover:opacity-100 transition-all duration-300">
+                                    <div class="text-center z-10">
+                                        <p class="font-extrabold text-[32px] leading-[48px] mb-[10px] text-white">{{$project->name}}</p>
+                                        <p class="text-lg text-[#BABABC]">{{$project->category}}</p>
+                                    </div>
+                                    <a href="{{route('front.details', $project)}}" class="z-10 font-bold text-lg text-center w-fit h-fit bg-portto-light-gold rounded-full p-[14px_30px] transition-all duration-300 hover:shadow-[0_10px_20px_0_#FFE7C280]">View Details</a>
+                                    <img src="{{asset('images/Ellipse.svg')}}" class="absolute transform -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2 w-1/2" alt="background icon">
+                                </div>
+                            </div>                            
+                        @endif
+                    @empty
+                        Data Belum Tersedia
+                    @endforelse
                 </div>
                 <div class="project-container animate-[slideToR_50s_linear_infinite] group-hover/slider:pause-animate flex gap-[30px] pl-[30px] items-center flex-nowrap ">
-                    <div class="group w-[650px] h-[450px] flex shrink-0 rounded-[30px] border border-white p-5 bg-[#FFFFFF33] backdrop-blur relative">
-                        <div class="w-[608px] h-[408px] rounded-[30px] overflow-hidden absolute">
-                            <img src="{{asset('images/thumbnails/thumbnail1.png')}}" class="w-full h-full object-cover" alt="thumbnail">
-                        </div>
-                        <div class="flex flex-col w-full items-center justify-center gap-[50px] bg-portto-black rounded-[30px] relative opacity-0 hover:opacity-100 transition-all duration-300">
-                            <div class="text-center z-10">
-                                <p class="font-extrabold text-[32px] leading-[48px] mb-[10px] text-white">AI Finance SaaS <br>Website Integrations</p>
-                                <p class="text-lg text-[#BABABC]">Website Development</p>
-                            </div>
-                            <a href="details.html" class="z-10 font-bold text-lg text-center w-fit h-fit bg-portto-light-gold rounded-full p-[14px_30px] transition-all duration-300 hover:shadow-[0_10px_20px_0_#FFE7C280]">View Details</a>
-                            <img src="{{asset('images/Ellipse.svg')}}" class="absolute transform -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2 w-1/2" alt="background icon">
-                        </div>
-                    </div>
-                    <div class="group w-[650px] h-[450px] flex shrink-0 rounded-[30px] border border-white p-5 bg-[#FFFFFF33] backdrop-blur relative">
-                        <div class="w-[608px] h-[408px] rounded-[30px] overflow-hidden absolute">
-                            <img src="{{asset('images/thumbnails/thumbnail2.png')}}" class="w-full h-full object-cover" alt="thumbnail">
-                        </div>
-                        <div class="flex flex-col w-full items-center justify-center gap-[50px] bg-portto-black rounded-[30px] relative opacity-0 hover:opacity-100 transition-all duration-300">
-                            <div class="text-center z-10">
-                                <p class="font-extrabold text-[32px] leading-[48px] mb-[10px] text-white">AI Finance SaaS <br>Website Integrations</p>
-                                <p class="text-lg text-[#BABABC]">Website Development</p>
-                            </div>
-                            <a href="details.html" class="z-10 font-bold text-lg text-center w-fit h-fit bg-portto-light-gold rounded-full p-[14px_30px] transition-all duration-300 hover:shadow-[0_10px_20px_0_#FFE7C280]">View Details</a>
-                            <img src="{{asset('images/Ellipse.svg')}}" class="absolute transform -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2 w-1/2" alt="background icon">
-                        </div>
-                    </div>
-                    <div class="group w-[650px] h-[450px] flex shrink-0 rounded-[30px] border border-white p-5 bg-[#FFFFFF33] backdrop-blur relative">
-                        <div class="w-[608px] h-[408px] rounded-[30px] overflow-hidden absolute">
-                            <img src="{{asset('images/thumbnails/thumbnail3.png')}}" class="w-full h-full object-cover" alt="thumbnail">
-                        </div>
-                        <div class="flex flex-col w-full items-center justify-center gap-[50px] bg-portto-black rounded-[30px] relative opacity-0 hover:opacity-100 transition-all duration-300">
-                            <div class="text-center z-10">
-                                <p class="font-extrabold text-[32px] leading-[48px] mb-[10px] text-white">AI Finance SaaS <br>Website Integrations</p>
-                                <p class="text-lg text-[#BABABC]">Website Development</p>
-                            </div>
-                            <a href="details.html" class="z-10 font-bold text-lg text-center w-fit h-fit bg-portto-light-gold rounded-full p-[14px_30px] transition-all duration-300 hover:shadow-[0_10px_20px_0_#FFE7C280]">View Details</a>
-                            <img src="{{asset('images/Ellipse.svg')}}" class="absolute transform -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2 w-1/2" alt="background icon">
-                        </div>
-                    </div>
+                    
+                    @forelse ($projects as $project)
+                     @if ($index >= 3)
+                            <div class="group w-[650px] h-[450px] flex shrink-0 rounded-[30px] border border-white p-5 bg-[#FFFFFF33] backdrop-blur relative">
+                                <div class="w-[608px] h-[408px] rounded-[30px] overflow-hidden absolute">
+                                    <img src="{{Storage::url($project->cover)}}" class="w-full h-full object-cover" alt="thumbnail">
+                                </div>
+                                <div class="flex flex-col w-full items-center justify-center gap-[50px] bg-portto-black rounded-[30px] relative opacity-0 hover:opacity-100 transition-all duration-300">
+                                    <div class="text-center z-10">
+                                        <p class="font-extrabold text-[32px] leading-[48px] mb-[10px] text-white">{{$project->name}}</p>
+                                        <p class="text-lg text-[#BABABC]">{{$project->category}}</p>
+                                    </div>
+                                    <a href="{{route('front.details', $project)}}" class="z-10 font-bold text-lg text-center w-fit h-fit bg-portto-light-gold rounded-full p-[14px_30px] transition-all duration-300 hover:shadow-[0_10px_20px_0_#FFE7C280]">View Details</a>
+                                    <img src="{{asset('images/Ellipse.svg')}}" class="absolute transform -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2 w-1/2" alt="background icon">
+                                </div>
+                            </div>                            
+                        @endif
+                    @empty
+                        Data Belum Tersedia
+                    @endforelse
                 </div>
             </div>
         </div>
