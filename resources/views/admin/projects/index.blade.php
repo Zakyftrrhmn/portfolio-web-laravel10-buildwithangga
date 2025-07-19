@@ -10,7 +10,8 @@
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg p-10 flex flex-col">
                 <a href="{{route('admin.projects.create')}}" class="w-fit py-4 px-10 text-white bg-indigo-950 rounded-full font-bold">Add New Project</a>
                 <hr class="my-5">
-                <div class="flex flex-col gap-y-5">
+
+                <div class="flex flex-col gap-y-4">
 
                     @forelse ($projects as $p)
                     <div class="item-project flex flex-row  items-center justify-between">
@@ -25,7 +26,7 @@
                        </div>
 
                         <div class="flex-row flex items-center gap-x-2">
-                            <a href="" class="py-3 px-5 rounded-full bg-indigo-950 text-white">Add Tools</a>
+                            <a href="{{route('admin.project.assign.tool', $p)}}" class="py-3 px-5 rounded-full bg-indigo-950 text-white">Add Tools</a>
                             <a href="" class="py-3 px-5 rounded-full bg-indigo-950 text-white">Add Screenshot</a>
                         </div>
 

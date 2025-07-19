@@ -2,33 +2,51 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Project;
 use App\Models\ProjectTool;
+use App\Models\Tool;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class ProjectToolController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
-    public function index()
-    {
-        //
-    }
+    public function index() {}
 
     /**
      * Show the form for creating a new resource.
      */
-    public function create()
+    public function create(Project $project)
     {
-        //
+        $tools = Tool::orderBy('id', 'desc')->get();
+        return view('admin.project_tools.create', compact('tools', 'project'));
     }
 
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(Request $request, Project $project)
     {
-        //
+        $validated = $request->validate([
+            'tool_id' => 'required|integer'
+        ]);
+
+        DB::beginTransaction();
+
+        try {
+            $validated['project_id'] = $project->id;
+
+            $assignTool = ProjectTool::updateOrCreate($validated);
+
+            DB::commit();
+
+            return redirect()->back()->with('success', 'Tool Assign Created Successfully');
+        } catch (\Exception $e) {
+            DB::rollBack();
+            return redirect()->back()->with('error', 'System Error' . $e->getMessage());
+        }
     }
 
     /**
@@ -60,6 +78,12 @@ class ProjectToolController extends Controller
      */
     public function destroy(ProjectTool $projectTool)
     {
-        //
+        try {
+            $projectTool->delete();
+            return redirect()->back()->with('success', 'Data deleted successfully!');
+        } catch (\Exception $e) {
+            DB::rollBack();
+            return redirect()->back()->with('error', 'System Error' . $e->getMessage());
+        }
     }
 }

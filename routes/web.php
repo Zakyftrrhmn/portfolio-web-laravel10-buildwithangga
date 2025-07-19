@@ -3,6 +3,7 @@
 use App\Http\Controllers\FrontController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ProjectController;
+use App\Http\Controllers\ProjectToolController;
 use App\Http\Controllers\ToolController;
 use Illuminate\Support\Facades\Route;
 
@@ -22,6 +23,11 @@ Route::middleware('auth')->group(function () {
     Route::prefix('admin')->name('admin.')->group(function () {
         Route::resource('projects', ProjectController::class);
         Route::resource('tools', ToolController::class);
+
+        Route::resource('project_tools', ProjectToolController::class);
+
+        Route::get('/tools/assign/{project}', [ProjectToolController::class, 'create'])->name('project.assign.tool');
+        Route::post('/tools/assign/save/{project}', [ProjectToolController::class, 'store'])->name('project.assign.tool.store');
     });
 });
 
